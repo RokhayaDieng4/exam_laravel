@@ -19,7 +19,7 @@
                     <x-alert type="success" text="{{session()->get('message')}}" />
                 @endif
 
-                <x-form.button text="Update" />
+                <x-form.button text="Mettre a jour" />
             </div>
         </form>
     </div>

@@ -3,7 +3,7 @@
 @section('title', 'Submit a Report')
 
 @section('main')
-    <x-page-header text='Report Question' />
+    <x-page-header text='Signaler une question' />
 
     @if(session()->has('message'))
         <x-alert type="success" text="{{session()->get('message')}}" />
@@ -17,8 +17,8 @@
 
             <div class="space-y-8">
                 <input type="hidden" name="question_id" value="{{$question->id}}">
-                <x-form.input name="reason" type="textarea" placeholder="Please write your reason for this report." label="Reason"/>
-                <x-form.button text="Submit" />
+                <x-form.input name="reason" type="textarea" placeholder="Veuillez écrire la raison de ce rapport." label="Raison"/>
+                <x-form.button text="Soumettre" />
             </div>
         </form>
     @endif

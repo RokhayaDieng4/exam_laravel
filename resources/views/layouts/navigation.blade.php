@@ -4,13 +4,13 @@
         <div class="flex justify-between items-center h-16">
             {{-- Logo Text --}}
             <a href="{{ route('home') }}" class="basis-1/4">
-                <h1 class="text-2xl font-extrabold text-slate-500 hover:text-slate-800 transition">Q&A Forum</h1>
+                <h1 class="text-2xl font-extrabold text-slate-500 hover:text-slate-800 transition">Questions/Reponses Forum</h1>
             </a>
 
             {{-- Searchbar & Search button --}}
             <div class="basis-1/2 flex items-center space-x-4">
                 <div class="relative w-full">
-                    <input class="form-input rounded-3xl mt-0" type="text" placeholder="Search questions" />
+                    <input class="form-input rounded-3xl mt-0" type="text" placeholder="Rechercher une question" />
                     <button class="absolute right-1 top-1 bottom-1 my-auto bg-slate-200 text-slate-600 py-1 px-2.5 rounded-3xl">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -53,13 +53,13 @@
 
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('dashboard')">
-                                    {{__('Dashboard')}}
+                                    {{__('Tableau de bord')}}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('bookmarks.index')">
-                                    {{__('Bookmarks')}}
+                                    {{__('Favoris')}}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('profile.edit')">
-                                    {{__('Profile')}}
+                                    {{__('Profil')}}
                                 </x-dropdown-link>
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
@@ -68,7 +68,7 @@
                                     <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault();
                                                         this.closest('form').submit();">
-                                        {{ __('Log Out') }}
+                                        {{ __('Deconnexion') }}
                                     </x-dropdown-link>
                                 </form>
                             </x-slot>
@@ -96,19 +96,19 @@
             {{-- Show login and register links for guest --}}
             @guest
                 <x-responsive-nav-link :href="route('login')" :active="request()->routeIs('login')">
-                    {{ __('Login') }}
+                    {{ __('se connecter') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('register')" :active="request()->routeIs('register')">
-                    {{ __('Register') }}
+                    {{ __('inscription') }}
                 </x-responsive-nav-link>
             @endguest
             {{-- Show authed settings menu --}}
             @auth
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
+                    {{ __('Tableau de bord') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('bookmarks.index')" :active="request()->routeIs('bookmarks.index')">
-                    {{ __('Bookmarks') }}
+                    {{ __('Favoris') }}
                 </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -116,7 +116,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Deconnexion') }}
                     </x-responsive-nav-link>
                 </form>
             @endauth

@@ -29,6 +29,6 @@
             </svg>
             <span>{{$question->answers->count()}} answers</span>
         </a>
-        <div class="text-xs text-gray-400 mt-1.5">Last answered: 24 minutes ago</div>
+        <div class="text-xs text-gray-400 mt-1.5">Dernière réponse: 24 minutes ago</div>
     </div>
 </div>

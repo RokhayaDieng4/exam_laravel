@@ -26,15 +26,15 @@
 
                         <button class="py-0.5 px-2 rounded bg-red-400 hover:bg-red-600 text-white flex items-center space-x-1"
                             onclick="event.preventDefault();
-                            if( confirm('Are you sure you want to remove this bookmark?') ) this.closest('form').submit();"
+                            if( confirm('Voulez-vous vraiment supprimer ce favoris ?') ) this.closest('form').submit();"
                         >
-                            Remove
+                            Supprimer
                         </button>
                     </form>
                 </a>
             @empty
                 <div class="py-2 px-4 text-sm font-medium">
-                    You currently have no questions bookmarked.
+                    Vous n'avez actuellement aucune question en favoris.
                 </d>
             @endforelse
         </div>

@@ -3,7 +3,7 @@
 @section('title', 'Create A Question')
 
 @section('main')
-    <x-page-header text='Create A New Question' />
+    <x-page-header text='Poser une nouvelle question' />
 
     <form action="{{route('questions.store')}}" method="POST">
         @csrf
@@ -13,12 +13,12 @@
                 <x-alert type="success" text="{{session()->get('message')}}" />
             @endif
             
-            <x-form.input name="title" type="text" placeholder="Ask a question" label="Question"/>
-            <x-form.input name="content" type="textarea" placeholder="Add some additional information." label="Content"/>
+            <x-form.input name="title" type="text" placeholder="Poser une question" label="Question"/>
+            <x-form.input name="content" type="textarea" placeholder="Ajoutez quelques informations supplémentaires." label="Contenu"/>
         
             <div>
                 <select name="topic" id="topic">
-                    <option value="">Select topic or create a new one</option>
+                    <option value="">Sélectionnez un sujet ou créez-en un nouveau</option>
                     @foreach ($topics as $topic)
                         <option value="{{$topic->id}}">{{$topic->name}}</option>
                     @endforeach
@@ -29,7 +29,7 @@
             </div>
 
 
-            <x-form.button text="Create New" />
+            <x-form.button text="Creer une nouvelle" />
         </div>
     </form>
 
@@ -37,7 +37,7 @@
         $(function () {
             $("select").selectize({
                 persist: false,  // This will make it so new topics don't stick around as an option
-                placeholder: 'Choose a topic or create a new one.',
+                placeholder: 'Sélectionnez un sujet ou créez-en un nouveau.',
                 maxItems: '1',
                 closeAfterSelect: true,
                 create: function(input) {

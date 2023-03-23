@@ -19,7 +19,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span class="text-sm">Marked as solution</span>
+                    <span class="text-sm">Marqué comme solution</span>
                 </div>
             @endif
 
@@ -41,7 +41,7 @@
             <input type="hidden" name="answer_id" value="{{$answer->id}}">
             <x-form.input name="comment" type="textarea" label="Write a reply" rows="2" required="required"/>
 
-            <button type="submit" class="mt-3 rounded-md py-1 px-4 bg-neutral-600 text-white font-medium text">Reply</button>
+            <button type="submit" class="mt-3 rounded-md py-1 px-4 bg-neutral-600 text-white font-medium text">Repondre</button>
         </form>
     @endauth
 

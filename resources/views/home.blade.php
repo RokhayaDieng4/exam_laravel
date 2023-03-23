@@ -6,7 +6,7 @@
     <x-page-header text="Recent Questions">
         @if($questions->count() === 20)
             <a href="{{route('questions.index')}}" id="allQuestions" type="submit" class="h-fit font-semibold py-1 px-3 border rounded-lg text-white bg-gray-700 hover:bg-gray-600 transition">
-                View All Questions
+                Voir toutes les questions
             </a>
         @endif
     </x-page-header>
