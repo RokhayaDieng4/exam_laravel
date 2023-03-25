@@ -4,7 +4,7 @@
         <div class="flex justify-between items-center h-16">
             {{-- Logo Text --}}
             <a href="{{ route('home') }}" class="basis-1/4">
-                <h1 class="text-2xl font-extrabold text-slate-500 hover:text-slate-800 transition">Questions/Reponses Forum</h1>
+            <img src="{{ asset('storage/images/image.png') }}" class="text-2xl font-extrabold text-slate-500 hover:text-slate-800 transition" >
             </a>
 
             {{-- Searchbar & Search button --}}
